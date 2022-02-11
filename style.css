@@ -1,0 +1,239 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+.container {
+    background-color: #fcfaff;
+    display: grid;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+  "nv"
+  "hd"
+  "st"
+}
+
+/* navigation */
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: #534278;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* individual nav boxes */
+
+#home {
+  order:  1;
+  width: 25%;
+}
+
+#FB {
+  order: 2;
+  width: 25%;
+}
+
+#TW {
+  order: 3;
+  width: 25%;
+}
+
+#LI {
+  order: 4;
+  width: 25%;
+}
+
+a.navhov {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a.navhov:hover, a.navhov:active {
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+  /* header */
+
+.header {
+    grid-area: hd;
+    text-align: center;
+    background: url('images/purplesunset.jpeg');
+    margin-top: 10px;
+}
+
+/* H styles */
+
+h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px #534278;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+h2 {
+  color: #534278;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+h3 {
+  font-weight: 500;
+  font-style: italic;
+  margin-top: -10px;
+}
+
+h5 {
+  margin-top: -5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* BUTTON */
+
+button {
+  font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+    color: #ffffff;
+    background-color: #534278;
+    font-weight: 600;
+    width: 100%;
+    max-width: 175px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none;
+
+}
+
+/* button hover */
+
+button:hover, button:active {
+  background-color: #312e54;
+   width: 100%;
+    max-width: 200px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+/* create two columns for blogs on left and about me and nav on the right */
+.structure {
+  grid-area: st;
+  display: grid;
+  margin: 20px;
+  grid-gap: 50px;
+  grid-template-columns: 75% 25%;
+  grid-template-areas:
+  "bl au"
+}
+
+/* left column for blogs */
+.blogs { 
+    grid-area: bl;
+      margin-left: 10px;
+  margin-right: 10px;
+ }
+
+/* right column for about me and nav */
+.aboutme {
+  grid-area: au;
+  float: right;
+  margin-right: 40px;
+  padding-left: 10px;
+  background-color: #F4EBFF;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.blogpost {
+  background-color: #F4EBFF;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* BLOG IMAGES */
+
+.image {
+max-width: 500px;
+width: 100%;
+}
+
+/* ABOUT ME IMAGE */
+
+.headshot {
+  width: 90%;
+  max-width: 200px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #f0f0f0;
+  margin-top: 50px;
+  color: #b1b1b1;
+  font-weight: 500;
+}
+
+/* Mobile Responsive Layout */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+.container {
+    background-color: #fcfaff;
+    display: grid;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+  "nv"
+  "hd"
+  "st"
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:  wrap;
+    justify-content: center;
+    background-color: #534278;
+    align-items: center;
+}
+
+.header {
+  max-width: 90%;
+}
+
+.structure {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "au"
+  "bl"
+}
+
+.footer {
+  max-width: 100%;
+}
+
+.image {
+max-width: 75%;
+}
+
+/* ABOUT ME IMAGE */
+
+.headshot {
+  max-width: 75%;
+}
+
+}
+
+
